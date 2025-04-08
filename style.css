@@ -1,0 +1,324 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles for Dark Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Container */
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #121212;
+}
+
+/* Header Styles */
+h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Login Page Styles */
+#loginPage {
+    width: 100%;
+    max-width: 450px;
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+#loginPage form {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginPage input {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E0E0E0;
+    transition: border-color 0.3s ease;
+}
+
+#loginPage input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#errorMessage {
+    color: red;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Inventory Page Styles */
+#inventoryPage {
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+#logoutBtn {
+    background-color: #f44336;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s;
+}
+
+#logoutBtn:hover {
+    background-color: #e41f1f;
+}
+
+/* Inventory Menu */
+#inventoryMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#inventoryMenu button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+#inventoryMenu button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+#inventoryMenu button:active {
+    transform: scale(0.98);
+}
+
+/* Add Asset Form Styles */
+#assetForm {
+    margin-top: 30px;
+    display: none;
+}
+
+#assetForm h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #E0E0E0;
+}
+
+#assetForm input, #assetForm select {
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E0E0E0;
+    transition: border-color 0.3s ease;
+}
+
+#assetForm input:focus, #assetForm select:focus {
+    border-color: #4CAF50;
+}
+
+#assetForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#assetForm button:hover {
+    background-color: #45a049;
+}
+
+/* Search Form */
+#searchForm {
+    margin-top: 30px;
+    display: none;
+}
+
+#searchForm input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E0E0E0;
+}
+
+#searchResults {
+    margin-top: 20px;
+}
+
+/* Inventory Table Styles */
+#inventoryList {
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#inventoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#inventoryTable th, #inventoryTable td {
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: left;
+    color: #E0E0E0;
+}
+
+#inventoryTable th {
+    background-color: #333;
+    color: white;
+}
+
+#inventoryTable tr:nth-child(even) {
+    background-color: #222;
+}
+
+#inventoryTable tr:nth-child(odd) {
+    background-color: #1a1a1a;
+}
+
+/* Edit Asset Form Styles */
+#editAssetForm {
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#editAssetForm h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #E0E0E0;
+}
+
+#editAssetForm input, #editAssetForm select {
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E0E0E0;
+    transition: border-color 0.3s ease;
+}
+
+#editAssetForm input:focus, #editAssetForm select:focus {
+    border-color: #4CAF50;
+}
+
+#editAssetForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#editAssetForm button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #loginPage {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #inventoryPage {
+        width: 90%;
+        padding: 25px;
+    }
+
+    #inventoryMenu {
+        flex-direction: column;
+    }
+
+    #inventoryMenu button {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #inventoryMenu button {
+        font-size: 0.875rem;
+    }
+
+    #assetForm input, #assetForm select {
+        font-size: 0.9rem;
+    }
+
+    #assetForm button {
+        font-size: 0.9rem;
+    }
+}

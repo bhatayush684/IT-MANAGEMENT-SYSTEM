@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+        <!-- Login Page -->
+        <div id="loginPage">
+            <h2>Login to Inventory</h2>
+            <form id="loginForm" action="" method="post">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <div id="errorMessage"></div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Inventory Page -->
+        <div id="inventoryPage">
+            <button id="logoutBtn">Logout</button>
+            <h2>Inventory Management</h2>
+
+            <div id="inventoryMenu">
+                <button onclick="showAddAssetForm()">Add New Asset</button>
+                <button onclick="showInventoryList()">View Inventory</button>
+                <button onclick="showSearchAsset()">Search Asset</button>
+            </div>
+
+            <!-- Add Asset Form -->
+            <div id="assetForm">
+                <h3>Add New Asset</h3>
+                <form id="addAssetForm">
+                    <input type="text" id="assetName" placeholder="Asset Name" required>
+                    <input type="number" id="assetQuantity" placeholder="Quantity" required>
+                    <select id="assetType">
+                        <option value="laptop">Laptop</option>
+                        <option value="mouse">Mouse</option>
+                        <option value="keyboard">Keyboard</option>
+                        <option value="monitor">Monitor</option>
+                    </select>
+                    <button type="submit">Add Asset</button>
+                </form>
+            </div>
+
+            <!-- Search Asset -->
+            <div id="searchForm">
+                <h3>Search Asset</h3>
+                <input type="text" id="searchQuery" placeholder="Enter asset name or type" oninput="searchAsset()">
+                <div id="searchResults"></div>
+            </div>
+
+            <!-- Inventory List -->
+            <div id="inventoryList">
+                <h3>Inventory List</h3>
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>Asset Name</th>
+                            <th>Quantity</th>
+                            <th>Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Inventory Items Will Be Populated Here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Edit Asset Form -->
+            <div id="editAssetForm" style="display: none;">
+                <h3>Edit Asset</h3>
+                <form id="editForm">
+                    <input type="text" id="editAssetName" placeholder="Asset Name" required>
+                    <input type="number" id="editAssetQuantity" placeholder="Quantity" required>
+                    <select id="editAssetType">
+                        <option value="laptop">Laptop</option>
+                        <option value="mouse">Mouse</option>
+                        <option value="Headphones">Keyboard</option>
+                        
+                    </select>
+                    <button type="submit">Update Asset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
